@@ -1,0 +1,207 @@
+body {
+  font: 100% Helvetica, sans-serif;
+  color: black;
+  margin: 0px; }
+  body a {
+    text-decoration: none;
+    color: black; }
+  body #container div {
+    box-sizing: border-box; }
+  body #container .map_container {
+    width: 800px;
+    height: 800px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    background: url("../img/region.svg");
+    background-repeat: no-repeat; }
+    body #container .map_container .escuela {
+      position: absolute;
+      pointer-events: none;
+      width: 250px;
+      height: 250px; }
+      body #container .map_container .escuela.olarte {
+        top: 70px;
+        left: 340px; }
+      body #container .map_container .escuela.curubital {
+        top: 365px;
+        left: 315px; }
+      body #container .map_container .escuela.arrayanes {
+        top: 440px;
+        left: 300px; }
+      body #container .map_container .escuela.argentina {
+        top: 360px;
+        left: 255px; }
+      body #container .map_container .escuela.hato {
+        top: 270px;
+        left: 255px; }
+    body #container .map_container .marker {
+      border: 1px solid red;
+      width: 250px;
+      height: 250px;
+      position: absolute;
+      pointer-events: none; }
+      body #container .map_container .marker svg {
+        pointer-events: painted; }
+      body #container .map_container .marker .mainIcon {
+        width: 80%;
+        position: absolute;
+        left: 80px;
+        bottom: 0px;
+        transform-origin: 50% 100%;
+        transition: transform 600ms;
+        transform: translateX(-50%) scale(0.3);
+        -webkit-transform: translateX(-50%) scale(0.3);
+        -moz-transform: translateX(-50%) scale(0.3);
+        -ms-transform: translateX(-50%) scale(0.3); }
+        body #container .map_container .marker .mainIcon .st0 {
+          fill: #cfd1cf;
+          stroke: #FFFFFF;
+          stroke-width: 2;
+          stroke-miterlimit: 10; }
+        body #container .map_container .marker .mainIcon .st1 {
+          fill: #FFFFFF; }
+      body #container .map_container .marker .ball {
+        width: 10px;
+        height: 10px;
+        display: none;
+        background: #cfd1cf;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        border-radius: 20px;
+        position: absolute; }
+        body #container .map_container .marker .ball.b1 {
+          top: 151px;
+          left: 106px; }
+        body #container .map_container .marker .ball.b2 {
+          top: 185px;
+          left: 120px; }
+        body #container .map_container .marker .ball.b3 {
+          top: 217px;
+          left: 106px; }
+      body #container .map_container .marker .btn {
+        width: 50px;
+        position: absolute;
+        display: none;
+        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%); }
+        body #container .map_container .marker .btn.audio_btn {
+          top: 105px;
+          left: 135px; }
+        body #container .map_container .marker .btn.video_btn {
+          top: 164px;
+          left: 160px; }
+        body #container .map_container .marker .btn.photo_btn {
+          top: 223px;
+          left: 135px; }
+      body #container .map_container .marker.selected .mainIcon {
+        transform: translateX(-50%) scale(0.5);
+        -webkit-transform: translateX(-50%) scale(0.5);
+        -moz-transform: translateX(-50%) scale(0.5);
+        -ms-transform: translateX(-50%) scale(0.5); }
+      body #container .map_container .marker.selected .ball {
+        display: block; }
+      body #container .map_container .marker.selected .btn {
+        display: block; }
+    body #container .map_container .olarte .marker .mainIcon .st0 {
+      fill: #18c652; }
+    body #container .map_container .olarte .marker .ball {
+      background: #18c652; }
+    body #container .map_container .curubital .marker .mainIcon .st0 {
+      fill: #ea8928; }
+    body #container .map_container .curubital .marker .ball {
+      background: #ea8928; }
+    body #container .map_container .arrayanes .marker .mainIcon .st0 {
+      fill: #3579db; }
+    body #container .map_container .arrayanes .marker .ball {
+      background: #3579db; }
+    body #container .map_container .argentina .marker .mainIcon .st0 {
+      fill: #f25444; }
+    body #container .map_container .argentina .marker .ball {
+      background: #f25444; }
+    body #container .map_container .hato .marker .mainIcon .st0 {
+      fill: #efda1d; }
+    body #container .map_container .hato .marker .ball {
+      background: #efda1d; }
+    body #container .map_container .svg_icon .st0 {
+      fill: #EA8928;
+      stroke: #FFFFFF;
+      stroke-width: 4;
+      stroke-miterlimit: 10; }
+    body #container .map_container .svg_icon .st1 {
+      fill: #FFFFFF; }
+    body #container .map_container .svg_icon.selected .st0 {
+      fill: #FFFFFF;
+      stroke: #EA8928;
+      stroke-width: 4;
+      stroke-miterlimit: 10; }
+    body #container .map_container .svg_icon.selected .st1 {
+      fill: #EA8928; }
+    body #container .map_container .svg_icon .audio {
+      display: none; }
+    body #container .map_container .svg_icon .video {
+      display: none; }
+    body #container .map_container .svg_icon .photo {
+      display: none; }
+    body #container .map_container .olarte .svg_icon .st0 {
+      fill: #18c652;
+      stroke: #FFFFFF; }
+    body #container .map_container .olarte .svg_icon .st1 {
+      fill: #FFFFFF; }
+    body #container .map_container .olarte .svg_icon.selected .st0 {
+      fill: #FFFFFF;
+      stroke: #18c652; }
+    body #container .map_container .olarte .svg_icon.selected .st1 {
+      fill: #18c652; }
+    body #container .map_container .curubital .svg_icon .st0 {
+      fill: #ea8928;
+      stroke: #FFFFFF; }
+    body #container .map_container .curubital .svg_icon .st1 {
+      fill: #FFFFFF; }
+    body #container .map_container .curubital .svg_icon.selected .st0 {
+      fill: #FFFFFF;
+      stroke: #ea8928; }
+    body #container .map_container .curubital .svg_icon.selected .st1 {
+      fill: #ea8928; }
+    body #container .map_container .arrayanes .svg_icon .st0 {
+      fill: #3579db;
+      stroke: #FFFFFF; }
+    body #container .map_container .arrayanes .svg_icon .st1 {
+      fill: #FFFFFF; }
+    body #container .map_container .arrayanes .svg_icon.selected .st0 {
+      fill: #FFFFFF;
+      stroke: #3579db; }
+    body #container .map_container .arrayanes .svg_icon.selected .st1 {
+      fill: #3579db; }
+    body #container .map_container .argentina .svg_icon .st0 {
+      fill: #f25444;
+      stroke: #FFFFFF; }
+    body #container .map_container .argentina .svg_icon .st1 {
+      fill: #FFFFFF; }
+    body #container .map_container .argentina .svg_icon.selected .st0 {
+      fill: #FFFFFF;
+      stroke: #f25444; }
+    body #container .map_container .argentina .svg_icon.selected .st1 {
+      fill: #f25444; }
+    body #container .map_container .hato .svg_icon .st0 {
+      fill: #efda1d;
+      stroke: #FFFFFF; }
+    body #container .map_container .hato .svg_icon .st1 {
+      fill: #FFFFFF; }
+    body #container .map_container .hato .svg_icon.selected .st0 {
+      fill: #FFFFFF;
+      stroke: #efda1d; }
+    body #container .map_container .hato .svg_icon.selected .st1 {
+      fill: #efda1d; }
+    body #container .map_container .audio_btn .svg_icon .audio {
+      display: block; }
+    body #container .map_container .video_btn .svg_icon .video {
+      display: block; }
+    body #container .map_container .photo_btn .svg_icon .photo {
+      display: block; }
