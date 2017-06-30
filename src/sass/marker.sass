@@ -1,0 +1,113 @@
+.marker
+	//border: 1px solid red
+	width: $marker-size
+	height: $marker-size
+	position: absolute
+	pointer-events: none
+	
+	svg
+		pointer-events: painted
+	.mainIcon
+		width: 80%
+		position: absolute
+		left: 80px
+		bottom: 0px
+		transform-origin: 50% 100%
+		transition: transform 600ms
+		@include transform(translateX(-50%) scale(0.3)) //for small
+
+		.st0
+			fill: $lightgray
+			stroke: #FFFFFF
+			stroke-width: 2
+			stroke-miterlimit: 10
+
+		.st1
+			fill: #FFFFFF
+
+
+	.ball
+		width: 10px
+		height: 10px
+		display: none
+		background: $lightgray
+		@include border-radius(20px)
+		position: absolute
+		
+		&.b1
+			top: 151px
+			left: 106px
+
+		&.b2
+			top: 185px
+			left: 120px
+
+		&.b3
+			top: 217px
+			left: 106px
+	
+	.btn
+		width: 50px
+		position: absolute
+		display: none
+		@include transform(translateX(-50%))
+		&.audio_btn
+			top: 105px
+			left: 135px
+
+		&.video_btn
+			top: 164px
+			left: 160px
+			
+		&.photo_btn
+			top: 223px
+			left: 135px
+	
+	&.selected
+		.mainIcon
+			@include transform(translateX(-50%) scale(0.5))
+		.ball
+			display: block
+		.btn
+			display: block
+
+
+//JUST FOR COLORS, positions and styles are added on style.sass
+.olarte
+	.marker
+		.mainIcon
+			.st0
+				fill: $green
+		.ball
+			background: $green
+.curubital
+	.marker
+		.mainIcon
+			.st0
+				fill: $orange
+		.ball
+			background: $orange
+.arrayanes
+	.marker
+		.mainIcon
+			.st0
+				fill: $blue
+		.ball
+			background: $blue
+.argentina
+	.marker
+		.mainIcon
+			.st0
+				fill: $red
+		.ball
+			background: $red
+.hato
+	.marker
+		.mainIcon
+			.st0
+				fill: $yellow
+		.ball
+			background: $yellow
+
+@import svg_icon
+
