@@ -1,3 +1,7 @@
+@font-face {
+  font-family: bigJohn;
+  src: url("../fonts/BIG JOHN.otf"); }
+
 body {
   font: 100% Helvetica, sans-serif;
   color: black;
@@ -7,6 +11,83 @@ body {
     color: black; }
   body #container div {
     box-sizing: border-box; }
+  body #container .description {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 700px; }
+    body #container .description .name {
+      position: relative;
+      width: 0;
+      height: 70px;
+      white-space: nowrap;
+      overflow-x: hidden;
+      background: #cfd1cf;
+      transition: width 600ms ease-in-out, background-color 300ms ease-in-out;
+      -webkit-transition: width 600ms ease-in-out, background-color 300ms ease-in-out;
+      -moz-transition: width 600ms ease-in-out, background-color 300ms ease-in-out;
+      -ms-transition: width 600ms ease-in-out, background-color 300ms ease-in-out; }
+      body #container .description .name h1 {
+        position: absolute;
+        font-family: bigJohn, arial, sans-serif;
+        font-size: 38px;
+        font-weight: normal;
+        color: white;
+        margin: 0 auto;
+        padding: 17px 10px 0 20px; }
+    body #container .description .subTitleWrapper {
+      transition: width 600ms ease-in-out, border-color 300ms ease-in-out;
+      -webkit-transition: width 600ms ease-in-out, border-color 300ms ease-in-out;
+      -moz-transition: width 600ms ease-in-out, border-color 300ms ease-in-out;
+      -ms-transition: width 600ms ease-in-out, border-color 300ms ease-in-out;
+      white-space: nowrap;
+      position: relative;
+      overflow-x: hidden;
+      width: 0;
+      height: 55px;
+      border-bottom: 2px solid #cfd1cf; }
+    body #container .description .project {
+      transition: color 300ms ease-in-out;
+      -webkit-transition: color 300ms ease-in-out;
+      -moz-transition: color 300ms ease-in-out;
+      -ms-transition: color 300ms ease-in-out;
+      position: absolute;
+      font-family: arial, sans-serif;
+      font-size: 24px;
+      padding: 0 8px;
+      margin-top: 16px;
+      font-weight: 600;
+      color: #cfd1cf; }
+    body #container .description.olarte .name {
+      background: #18c652; }
+    body #container .description.olarte .subTitleWrapper {
+      border-color: #18c652; }
+    body #container .description.olarte .project {
+      color: #18c652; }
+    body #container .description.curubital .name {
+      background: #ea8928; }
+    body #container .description.curubital .subTitleWrapper {
+      border-color: #ea8928; }
+    body #container .description.curubital .project {
+      color: #ea8928; }
+    body #container .description.arrayanes .name {
+      background: #3579db; }
+    body #container .description.arrayanes .subTitleWrapper {
+      border-color: #3579db; }
+    body #container .description.arrayanes .project {
+      color: #3579db; }
+    body #container .description.argentina .name {
+      background: #f25444; }
+    body #container .description.argentina .subTitleWrapper {
+      border-color: #f25444; }
+    body #container .description.argentina .project {
+      color: #f25444; }
+    body #container .description.hato .name {
+      background: #efda1d; }
+    body #container .description.hato .subTitleWrapper {
+      border-color: #efda1d; }
+    body #container .description.hato .project {
+      color: #efda1d; }
   body #container .map_container {
     width: 800px;
     height: 800px;
@@ -16,7 +97,7 @@ body {
     -moz-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     top: 50%;
-    left: 50%;
+    left: 55%;
     background: url("../img/region.svg");
     background-repeat: no-repeat; }
     body #container .map_container .escuela {
@@ -40,7 +121,6 @@ body {
         top: 270px;
         left: 255px; }
     body #container .map_container .marker {
-      border: 1px solid red;
       width: 250px;
       height: 250px;
       position: absolute;
