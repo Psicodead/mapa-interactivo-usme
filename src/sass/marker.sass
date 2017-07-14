@@ -50,6 +50,7 @@
 		width: 50px
 		position: absolute
 		display: none
+		z-index: 10
 		@include transform(translateX(-50%))
 		&.audio_btn
 			top: 105px
@@ -64,6 +65,7 @@
 			left: 135px
 	
 	&.selected
+		z-index: 5
 		.mainIcon
 			@include transform(translateX(-50%) scale(0.5))
 		.ball
@@ -101,6 +103,31 @@
 				fill: $red
 		.ball
 			background: $red
+			
+			&.b1
+				top: 151px
+				left: 46px
+
+			&.b2
+				top: 185px
+				left: 30px
+
+			&.b3
+				top: 217px
+				left: 46px
+		
+		.btn
+			&.audio_btn
+				top: 105px
+				left: 25px
+
+			&.video_btn
+				top: 164px
+				left: 0px
+				
+			&.photo_btn
+				top: 223px
+				left: 25px
 .hato
 	.marker
 		.mainIcon

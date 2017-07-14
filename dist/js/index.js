@@ -26828,6 +26828,10 @@ $(document).ready(()=>{
 	$(".escuela .marker .mainIcon").click((e)=>{
 		clickOnMarker($(e.currentTarget).parent());
 	})
+	$(".btn").click((e)=>{
+		console.log("cclickkkkkk on ", $(e.currentTarget))
+		clickOnIcon($(e.currentTarget));
+	})
 	changeBodySize(descriptionTitle, descriptionTitle.parent(), 60)
 	changeBodySize(descriptionSubTitle, descriptionSubTitle.parent(), 20)
 })
@@ -26849,6 +26853,14 @@ function clickOnMarker(target){
 
 	changeBodySize(descriptionTitle, descriptionTitle.parent(), 60)
 	changeBodySize(descriptionSubTitle, descriptionSubTitle.parent(), 20)
+}
+
+function clickOnIcon(target){
+	var all = $(".btn");
+	$.each(all, ()=>{
+		all.removeClass("selected");
+	})
+	target.addClass("selected");
 }
 
 function changeDescriptionBodySize(){

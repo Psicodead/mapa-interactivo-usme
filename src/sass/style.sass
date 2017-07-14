@@ -5,6 +5,7 @@ $orange: #ea8928
 $blue: #3579db
 $red: #f25444
 $green: #18c652
+$greenD: #18c652
 $yellow: #efda1d
 $lightgray: #cfd1cf
 $mainfontsize: 13pt
@@ -20,6 +21,8 @@ $descriptionX: 10%
 	src: url("../fonts/BIG JOHN.otf")
 
 body
+	//background: url("../img/topography.png")
+	//background-repeat: repeat
 	font: 100% $font-stack
 	color: black
 	margin: 0px
@@ -44,6 +47,7 @@ body
 				white-space: nowrap
 				overflow-x: hidden
 				background: $lightgray
+				opacity: 0.8
 				@include transition(width 600ms ease-in-out, background-color 300ms ease-in-out)
 				//@include transition(background-color 600ms ease-in-out)
 				
@@ -111,6 +115,12 @@ body
 				.project
 					color: $yellow
 
+		
+		.miniMap
+			margin-top: 50px
+			width: 400px
+			height: 250px
+			border: 1px solid red
 
 		.map_container
 			width: 800px
@@ -148,3 +158,15 @@ body
 					left: 255px
 
 			@import marker
+
+body::after
+	content: ""
+	background: url("../img/topography.png")
+	background-repeat: repeat
+	opacity: 0.5
+	top: 0
+	left: 0
+	bottom: 0
+	right: 0
+	position: absolute
+	z-index: -1

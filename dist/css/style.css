@@ -23,6 +23,7 @@ body {
       white-space: nowrap;
       overflow-x: hidden;
       background: #cfd1cf;
+      opacity: 0.8;
       transition: width 600ms ease-in-out, background-color 300ms ease-in-out;
       -webkit-transition: width 600ms ease-in-out, background-color 300ms ease-in-out;
       -moz-transition: width 600ms ease-in-out, background-color 300ms ease-in-out;
@@ -88,6 +89,11 @@ body {
       border-color: #efda1d; }
     body #container .description.hato .project {
       color: #efda1d; }
+  body #container .miniMap {
+    margin-top: 50px;
+    width: 400px;
+    height: 250px;
+    border: 1px solid red; }
   body #container .map_container {
     width: 800px;
     height: 800px;
@@ -167,6 +173,7 @@ body {
         width: 50px;
         position: absolute;
         display: none;
+        z-index: 10;
         transform: translateX(-50%);
         -webkit-transform: translateX(-50%);
         -moz-transform: translateX(-50%);
@@ -180,15 +187,17 @@ body {
         body #container .map_container .marker .btn.photo_btn {
           top: 223px;
           left: 135px; }
-      body #container .map_container .marker.selected .mainIcon {
-        transform: translateX(-50%) scale(0.5);
-        -webkit-transform: translateX(-50%) scale(0.5);
-        -moz-transform: translateX(-50%) scale(0.5);
-        -ms-transform: translateX(-50%) scale(0.5); }
-      body #container .map_container .marker.selected .ball {
-        display: block; }
-      body #container .map_container .marker.selected .btn {
-        display: block; }
+      body #container .map_container .marker.selected {
+        z-index: 5; }
+        body #container .map_container .marker.selected .mainIcon {
+          transform: translateX(-50%) scale(0.5);
+          -webkit-transform: translateX(-50%) scale(0.5);
+          -moz-transform: translateX(-50%) scale(0.5);
+          -ms-transform: translateX(-50%) scale(0.5); }
+        body #container .map_container .marker.selected .ball {
+          display: block; }
+        body #container .map_container .marker.selected .btn {
+          display: block; }
     body #container .map_container .olarte .marker .mainIcon .st0 {
       fill: #18c652; }
     body #container .map_container .olarte .marker .ball {
@@ -205,16 +214,42 @@ body {
       fill: #f25444; }
     body #container .map_container .argentina .marker .ball {
       background: #f25444; }
+      body #container .map_container .argentina .marker .ball.b1 {
+        top: 151px;
+        left: 46px; }
+      body #container .map_container .argentina .marker .ball.b2 {
+        top: 185px;
+        left: 30px; }
+      body #container .map_container .argentina .marker .ball.b3 {
+        top: 217px;
+        left: 46px; }
+    body #container .map_container .argentina .marker .btn.audio_btn {
+      top: 105px;
+      left: 25px; }
+    body #container .map_container .argentina .marker .btn.video_btn {
+      top: 164px;
+      left: 0px; }
+    body #container .map_container .argentina .marker .btn.photo_btn {
+      top: 223px;
+      left: 25px; }
     body #container .map_container .hato .marker .mainIcon .st0 {
       fill: #efda1d; }
     body #container .map_container .hato .marker .ball {
       background: #efda1d; }
     body #container .map_container .svg_icon .st0 {
+      transition: fill 200ms, stroke 400ms ease-in-out;
+      -webkit-transition: fill 200ms, stroke 400ms ease-in-out;
+      -moz-transition: fill 200ms, stroke 400ms ease-in-out;
+      -ms-transition: fill 200ms, stroke 400ms ease-in-out;
       fill: #EA8928;
       stroke: #FFFFFF;
       stroke-width: 4;
       stroke-miterlimit: 10; }
     body #container .map_container .svg_icon .st1 {
+      transition: fill 200ms, stroke 400ms ease-in-out;
+      -webkit-transition: fill 200ms, stroke 400ms ease-in-out;
+      -moz-transition: fill 200ms, stroke 400ms ease-in-out;
+      -ms-transition: fill 200ms, stroke 400ms ease-in-out;
       fill: #FFFFFF; }
     body #container .map_container .svg_icon.selected .st0 {
       fill: #FFFFFF;
@@ -234,50 +269,50 @@ body {
       stroke: #FFFFFF; }
     body #container .map_container .olarte .svg_icon .st1 {
       fill: #FFFFFF; }
-    body #container .map_container .olarte .svg_icon.selected .st0 {
+    body #container .map_container .olarte .btn.selected .st0 {
       fill: #FFFFFF;
       stroke: #18c652; }
-    body #container .map_container .olarte .svg_icon.selected .st1 {
+    body #container .map_container .olarte .btn.selected .st1 {
       fill: #18c652; }
     body #container .map_container .curubital .svg_icon .st0 {
       fill: #ea8928;
       stroke: #FFFFFF; }
     body #container .map_container .curubital .svg_icon .st1 {
       fill: #FFFFFF; }
-    body #container .map_container .curubital .svg_icon.selected .st0 {
+    body #container .map_container .curubital .btn.selected .st0 {
       fill: #FFFFFF;
       stroke: #ea8928; }
-    body #container .map_container .curubital .svg_icon.selected .st1 {
+    body #container .map_container .curubital .btn.selected .st1 {
       fill: #ea8928; }
     body #container .map_container .arrayanes .svg_icon .st0 {
       fill: #3579db;
       stroke: #FFFFFF; }
     body #container .map_container .arrayanes .svg_icon .st1 {
       fill: #FFFFFF; }
-    body #container .map_container .arrayanes .svg_icon.selected .st0 {
+    body #container .map_container .arrayanes .btn.selected .st0 {
       fill: #FFFFFF;
       stroke: #3579db; }
-    body #container .map_container .arrayanes .svg_icon.selected .st1 {
+    body #container .map_container .arrayanes .btn.selected .st1 {
       fill: #3579db; }
     body #container .map_container .argentina .svg_icon .st0 {
       fill: #f25444;
       stroke: #FFFFFF; }
     body #container .map_container .argentina .svg_icon .st1 {
       fill: #FFFFFF; }
-    body #container .map_container .argentina .svg_icon.selected .st0 {
+    body #container .map_container .argentina .btn.selected .st0 {
       fill: #FFFFFF;
       stroke: #f25444; }
-    body #container .map_container .argentina .svg_icon.selected .st1 {
+    body #container .map_container .argentina .btn.selected .st1 {
       fill: #f25444; }
     body #container .map_container .hato .svg_icon .st0 {
       fill: #efda1d;
       stroke: #FFFFFF; }
     body #container .map_container .hato .svg_icon .st1 {
       fill: #FFFFFF; }
-    body #container .map_container .hato .svg_icon.selected .st0 {
+    body #container .map_container .hato .btn.selected .st0 {
       fill: #FFFFFF;
       stroke: #efda1d; }
-    body #container .map_container .hato .svg_icon.selected .st1 {
+    body #container .map_container .hato .btn.selected .st1 {
       fill: #efda1d; }
     body #container .map_container .audio_btn .svg_icon .audio {
       display: block; }
@@ -285,3 +320,15 @@ body {
       display: block; }
     body #container .map_container .photo_btn .svg_icon .photo {
       display: block; }
+
+body::after {
+  content: "";
+  background: url("../img/topography.png");
+  background-repeat: repeat;
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1; }
