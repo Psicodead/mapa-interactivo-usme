@@ -320,6 +320,32 @@ body {
       display: block; }
     body #container .map_container .photo_btn .svg_icon .photo {
       display: block; }
+  @media only screen and (max-width: 1500px) {
+    body #container .description {
+      top: 30px;
+      left: 30px; }
+      body #container .description .name h1 {
+        font-size: 28px;
+        padding: 23px 10px 0 20px; }
+    body #container .map_container {
+      left: 70%;
+      width: 480px;
+      height: 480px; }
+      body #container .map_container .escuela.olarte {
+        top: -70px;
+        left: 170px; }
+      body #container .map_container .escuela.curubital {
+        top: 125px;
+        left: 158px; }
+      body #container .map_container .escuela.arrayanes {
+        top: 170px;
+        left: 145px; }
+      body #container .map_container .escuela.argentina {
+        top: 120px;
+        left: 120px; }
+      body #container .map_container .escuela.hato {
+        top: 60px;
+        left: 120px; } }
 
 body::after {
   content: "";
